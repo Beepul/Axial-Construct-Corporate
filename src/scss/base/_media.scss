@@ -1,0 +1,126 @@
+@use '../abstracts' as *;
+
+
+@media (max-width: 1200px) and (min-width: 991px) {
+    .hero__sec{
+        max-height: 130vh;
+    }
+    .stats{
+        img{
+            transform: translateY(30%) !important;
+        }
+    }
+    .about__sec{
+        .heading__con{
+            h2{
+                font-size: 32px;
+                width: 100%;
+            }
+        }
+    }
+}
+@media (max-width: 991px) {
+    .hero__sec{
+        max-height: 180vh !important;
+    }
+    .brief{
+        position: relative !important;
+        img{
+            position: absolute !important;
+            top: 150%;
+            left: -10%;
+            width: 50% !important;
+        }
+    }
+    .testimonials__sec{
+        .swiper-button-prev{
+            left: 84% !important;
+        }
+    }
+}
+
+@media (max-width: 650px) {
+    .hero__sec{
+        max-height: 130vh !important;
+        h1{
+            font-size: 42px !important;
+            line-height: 62px !important;
+            width: 100% !important;
+        }
+        .stats{
+            span{
+                font-size: 42px !important;
+            }
+            img{
+            transform: translateY(-20%) !important;
+            }
+        }
+    }
+    .testimonials__sec .swiper {
+        height: 600px;
+    }
+}
+@media (max-width:768px) {
+    .path__ban__sec{
+        h1{
+            font-size: 42px;
+        }
+    }
+    .heading__con{
+        p{
+            font-size: 14px;
+        }
+        h2{
+            font-size: 42px !important;
+            width: 100%;
+        }
+    }
+    .testimonials__sec{
+        .swiper-button-prev{
+            left: 0% !important;
+            top: 60% !important;
+        }
+        .swiper-button-next{
+            right: 0% !important;
+            top: 60% !important;
+        }
+    }
+}
+@media (max-width: 413px) {
+    .hero__sec{
+        max-height: 150vh !important;
+        h6{
+            line-height: 26px !important;
+        }
+    }
+    .heading__con{
+        h2{
+            font-size: 32px !important;
+        }
+    }
+    .testimonials__sec .swiper {
+        height: 800px;
+    }
+}
+
+@media (max-width: 1400px) {
+    .choose__sec, .faq__sec{
+        .heading__con{
+            h2{
+                font-size: 42px !important;
+                display: flex !important;
+                flex-wrap: wrap !important;
+                width: 100%;
+                span{
+                    margin-left: 0 !important;
+                }
+
+            }
+        }
+    }
+    .testimonials__sec{
+        .swiper-button-prev{
+            left: 89%;
+        }
+    }
+}

@@ -1,0 +1,43 @@
+@use '../abstracts' as *;
+
+.our__team__sec{
+    background-color: $white;
+    .team__con{
+        .text__con{
+            @include border(rgba(189, 189, 189, 0.699));
+            border-top: 0;
+        }
+        .img__con{
+            height: 500px;
+            img{
+                object-fit: cover;
+            }
+        }
+        h5{
+            color: $teal;
+        }
+        p{
+            font-size: 20px;
+            color: $black;
+        }
+        .icons{
+            i{
+                background-color: $blue;
+                color: $white;
+                height: 40px;
+                width: 40px;
+                display: grid;
+                place-items: center;
+                border-radius: 50%;
+                cursor: pointer;
+                transition: 0.4s all;
+            }
+            li:hover{
+                i{
+                    color: $white;
+                    background-color: $teal;
+                }
+            }
+        }
+    }
+}

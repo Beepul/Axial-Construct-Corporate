@@ -1,0 +1,24 @@
+@use '../abstracts' as *;
+.about__sec{
+    background-color: $white;
+    p:nth-child(2){
+        color: $gray;
+        padding: 22px 0;
+    }
+    ul{
+        margin-bottom: 10px;
+    }
+    li{
+        color: $gray;
+        svg{
+            color: $teal;
+            padding-right: 14px;
+        }
+    }
+    .bottom__right{
+        h2{
+            width: 100% !important;
+            font-size: 42px;
+        }
+    }
+}

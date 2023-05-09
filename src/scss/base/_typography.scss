@@ -1,0 +1,14 @@
+@use '../abstracts' as *;
+
+h1,h2,h3,h4,h5,h6{
+    font-weight: 700;
+    font-family: $font;
+    letter-spacing: 1.8px;
+    margin-bottom: 0 !important;
+}
+
+p,a,li{
+    font-family: $font;
+    line-height: 32px;
+    font-size: 18px;
+}

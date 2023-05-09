@@ -1,0 +1,46 @@
+@use "../abstracts" as *;
+
+.yellow__btn{
+    background-color: $yellow;
+    color: $black;
+    border: 0;
+    border-radius: 0;
+    font-weight: 600;
+    padding: 12px 30px;
+    font-size: 18px;
+    margin-top: 24px;
+    transition: 0.2s all linear;
+    text-transform: uppercase;
+    &:hover{
+        background-color: $yellow;
+        color: $black;
+        transform: translateY(-10px);
+    }
+    &:focus{
+        background-color: $yellow !important; 
+        color: $black !important;
+    }
+}
+.arrow__btn{
+    background-color: unset;
+    border: 0;
+    border-radius: 0;
+    font-size: 18px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0;
+    svg{
+        transition: 0.2s all linear;
+    }
+    &:hover{
+        background-color: unset;
+        svg{
+            transform: translateX(6px);
+        }
+    }
+    &:focus{
+        background-color: unset !important;
+    }
+}

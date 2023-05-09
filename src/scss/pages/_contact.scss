@@ -1,0 +1,17 @@
+@use '../abstracts' as *;
+.contact__sec{
+    background-color: $white;
+    input, textarea{
+        border-radius: 0;
+        line-height: 2.5;
+        &:focus{
+            border-color: $teal;
+            box-shadow: none !important;
+        }
+        &::placeholder{
+            font-weight: 500;
+            color: rgba(165, 165, 165, 0.623);
+            font-size: 18px;
+        }
+    }
+}

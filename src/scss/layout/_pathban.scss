@@ -1,0 +1,27 @@
+@use '../abstracts' as *;
+
+.path__ban__sec{
+    height: 50vh;
+    background-color: $blue;
+    background-image: url('https://html.merku.love/axial/img/plan.webp');
+    color: $white;
+    p:nth-child(1){
+        text-transform: uppercase;
+        font-size: 15px;
+        font-weight: 600;
+        position: relative;
+        &::before{
+            content: '';
+            position: absolute;
+            top: 45%;
+            left: -100px;
+            width: 90px;
+            height: 4px;
+            background-color: $yellow;
+        }
+    }
+    h1{
+        font-size: 52px;
+        padding: 14px 0;
+    }
+}

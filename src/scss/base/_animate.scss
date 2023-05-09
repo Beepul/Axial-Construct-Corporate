@@ -1,0 +1,31 @@
+@use '../abstracts' as *;
+
+@keyframes blink {
+    0%{
+        // opacity: 0;
+        outline: 0px solid #fcdc9263;
+    }100%{
+        // opacity: 1;
+        outline: 10px solid #fcdc9256;
+    }
+}
+
+@keyframes show {
+    0%{
+        opacity: 0;
+        height: 0;
+        width: 0;
+    }100%{
+        opacity: 1;
+        height: 100%;
+        width: 100%;
+    }
+}
+
+@keyframes underline {
+    0%{
+        width: 0%;
+    }100%{
+        width: 130%;
+    }
+}

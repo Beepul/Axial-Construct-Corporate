@@ -1,0 +1,66 @@
+@use '../abstracts' as *;
+
+.single__project__sec{
+    background-color: $white;
+    .upper__text{
+        h2{
+            width: 100%;
+        }
+    }
+    .desc__list{
+        li{
+            svg{
+                color: $teal;
+                padding-right: 14px;
+            }
+        }
+    }
+    .project__info{
+        background-color: rgba(211, 211, 211, 0.26);
+        .list{
+            li{
+                padding: 14px 0;
+                p{
+                    font-weight: 700;
+                }
+                p:nth-child(1){
+                    font-weight: 500;
+                    color: $gray;
+                }
+            }
+        }
+    }
+    .img__con{
+        height: 400px;
+        img{
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .slider__one{
+        .swiper-button-prev, .swiper-button-next{
+            color: $yellow;
+            background-color: $blue;
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            opacity: 0;
+            transition: 0.3s all ;
+            &::after{
+                font-size: 24px;
+            }
+        }
+        .swiper{
+            &:hover{
+                .swiper-button-prev, .swiper-button-next{
+                    opacity: 1;
+                }
+            }
+        }
+        .swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled {
+            opacity: 0;
+            cursor: auto;
+            pointer-events: none;
+        }
+    }
+}

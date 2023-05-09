@@ -1,0 +1,35 @@
+@use '../abstracts' as *;
+
+.photo__ban__sec{
+    height: 50vh;
+    position: relative;
+    .overlay{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(10, 10, 10, 0.623);
+        z-index: 10;
+    }
+    .ban__con{
+        position: absolute;
+        z-index: 20;
+        inset: 0;
+        color: $white;
+        p:nth-child(1){
+            text-transform: uppercase;
+            font-size: 15px;
+            font-weight: 600;
+            position: relative;
+            &::before{
+                content: '';
+                position: absolute;
+                top: 45%;
+                left: -100px;
+                width: 90px;
+                height: 4px;
+                background-color: $yellow;
+        }}
+    }
+}

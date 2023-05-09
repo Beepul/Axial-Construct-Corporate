@@ -1,0 +1,390 @@
+@use '../abstracts' as *;
+@use "../base/animate";
+
+.hero__sec{
+    background-color: $blue;
+    padding-top: 120px;
+    overflow: hidden;
+    // min-height: 90vh;
+    max-height: 100vh;
+    .brief{
+        color: $white;
+        h6{
+            line-height: 46px;
+            position: relative;
+            &::after{
+                content: "";
+                position: absolute;
+                top: 40%;
+                left: -20%;
+                width: 18%;
+                height: 4px;
+                background-color: $yellow;
+            }
+        }
+        h1{
+            font-size: 62px;
+            line-height: 82px;
+            width: 600px;
+        }
+        p{
+            padding-top: 10px;
+            max-width: 500px;
+        }
+        .btn__con{
+            height: 75px;
+        }
+        img{
+            transform: rotate(154deg);
+            opacity: 0.5;
+            
+        }
+    }
+    .stats{
+        // background-color: red;
+        p{
+            color: $white;
+            display: flex;
+            flex-direction: column;
+            font-size: 18px;
+            font-weight: 600;
+            padding-bottom: 30px;
+            span{
+                font-size: 52px;
+                font-weight: 700;
+                color: $yellow;
+                line-height: 46px;
+            }
+        }
+        img{
+            width: 800px;
+            transform: rotate(1deg) scale(1.1);
+        }
+    }
+}
+
+.solutions__sec{
+    background-color: $white;
+    .sol__con{
+        @include border(rgba(194, 194, 194, 0.747));
+        // width: 420px;
+        height: 100%;
+        &:hover{
+            border-color: $teal;
+        }
+        .icon__con{
+            margin-bottom: 20px;
+            svg{
+                color: $gray;
+                font-size: 46px;
+                opacity: 0.2;
+            }
+        }
+        .text__con{
+            h4{
+                line-height: 36px;
+                margin-bottom: 10px !important;
+                font-size: 26px;
+            }
+            p{
+                color: $gray;
+                line-height: 30px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+
+.work__sec{
+  color: $white;
+    .work__con{
+        .img__con{
+            height: 400px;
+            overflow: hidden;
+            &:hover{
+                img{
+                    transform: scale(1.1);
+                }
+            }
+            img{
+                object-fit: cover;
+                transition: 0.4s all linear;
+            }
+        }
+    }
+    .line{
+        height: 1.8px;
+        width: 100%;
+        background-color: rgb(209, 209, 209);
+    }
+    .text__con{
+        h3{
+            padding-bottom: 10px;
+            // border-bottom: 2px solid rgb(209, 209, 209);
+            margin-bottom: 10px !important;
+        }
+        p{
+            svg{
+                color: $yellow;
+                margin-right: 8px;
+            }
+        }
+    }
+}
+
+.loaction__sec{
+    background-color: $white;
+    .left__con{
+        position: relative;
+        .hot__spot{
+            background-color: $yellow;
+            height: 14px;
+            width: 14px;
+            border-radius: 50%;
+            position: absolute;
+            animation: blink 1.5s ease-out infinite alternate-reverse;
+            cursor: pointer;
+        }
+        span{
+            position: absolute;
+            background-color: $teal;
+            color: $white;
+            padding: 14px 20px;
+            cursor: pointer;
+            z-index: 10;
+        }
+        
+    }
+    .text__con{
+        p{
+            color: $gray;
+            font-size: 20px;
+            margin-bottom: 100px;
+            
+        }
+        .count{
+            color: $black;
+            display: flex;
+            flex-direction: column;
+            font-size: 20px;
+            margin-bottom: 30px;
+            font-weight: 600;
+            width: 250px;
+            span{
+                color: $teal;
+                font-size: 52px;
+                font-weight: 700;
+                margin-bottom: 30px;
+            }
+        }
+        
+    }
+}
+
+.choose__sec{
+    background-color: $blue;
+    .item__con{
+        height: 100%;
+        
+        ul{
+            padding-top: 20px;
+            li{
+                color: $white;
+                svg{
+                    padding-right: 10px;
+                    color: $teal;
+                }
+            }
+        }
+    }
+    .rease__con{
+        @include border($white);
+        color: $white;
+        transition: 0.2s all linear;
+        &:hover{
+            border-color: $teal;
+        }
+        svg{
+            font-size: 40px;
+            color: $yellow;
+            opacity: 0.9;
+        }
+        h2{
+            color: $white;
+            padding: 18px 0;
+        }
+    }
+}
+
+.team__sec{
+    background-color: $blue;
+    .video__con{
+        overflow: hidden;
+        position: relative;
+        height: 650px;
+        video{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            
+        }
+        .control{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            height: 80px;
+            width: 80px;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            border: 2px solid $blue;
+            cursor: pointer;
+            transition: 0.2s all linear;
+            display: none;
+            &:hover{
+                border-color: $yellow;
+                svg{
+                    color: $yellow
+                }
+            }
+            svg{
+                color: $blue;
+                font-size: 22px;
+            transition: 0.2s all linear;
+
+            }
+        }
+        &:hover{
+            .control{
+                display: flex;
+            }
+        }
+    }
+    .left__text{
+        color: $white;
+        p{
+           margin-bottom: 14px;
+        }
+        li{
+            svg{
+                color: $yellow;
+                margin-right: 14px;
+            }
+        }
+    }
+    .right__text{
+        background:radial-gradient(123.37% 123.37% at 5.3% 9.03%,rgba(255,255,255,.7) 0,rgba(255,255,255,.4) 99.92%);
+        padding: 38px 48px;
+        h5{
+            margin-bottom: 18px !important;
+        }
+        .profile{
+            img{
+                border-radius: 50%;
+                height: 80px;
+                width: 80px;
+            }
+        }
+        svg{
+           font-size: 86px;
+           color: $yellow;
+        }
+    }
+}
+.faq__sec{
+    background-color: $white;
+    .text{
+        font-size: 18px;
+        color: $gray;
+    }
+}
+  
+.testimonials__sec{
+    background-color: $white;
+    position: relative;
+    .swiper{
+        height: 500px;
+        .swiper-wrapper{
+            position: absolute;
+            top: 24%;
+        }
+    }
+    .swiper-button-prev{
+        position: absolute;
+        top: 10%;
+        left: 92%;
+        width: unset;
+        height: unset;
+        &:hover{
+            &::after{
+                background-color: $blue;
+                color: $white;
+            }
+        }
+        &::after{
+            content: "🡨";
+            transition: 0.2s all linear;
+            font-size: 20px;
+            color: $blue;
+            font-weight: 700;
+            border: 1px solid $blue;
+            height: 42px;
+            width: 42px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    .swiper-button-next{
+        top: 10%;
+        width: unset;
+        height: unset;
+        &:hover{
+            &::after{
+                background-color: $blue;
+                color: $white;
+            }
+        }
+        &::after{
+            content: "🡪";
+            transition: 0.2s all linear;
+            font-size: 20px;
+            color: $blue;
+            font-weight: 700;
+            border: 1px solid $blue;
+            height: 42px;
+            width: 42px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    .swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled {
+         opacity: unset; 
+         cursor: pointer; 
+        pointer-events: unset; 
+    }
+    .car__con{
+        background-color: rgba(235, 235, 235, 0.199);
+        box-shadow: 0px 0px 8px 2px rgba(172, 172, 172, 0.288);
+        svg{
+            color: $yellow;
+        }
+        .profile{
+            img{
+                border-radius: 50%;
+                object-fit: cover;
+               width: 80px;
+               height: 80px;
+            }
+            p{
+                font-size: 15px;
+            }
+        }
+    }
+}
+
+

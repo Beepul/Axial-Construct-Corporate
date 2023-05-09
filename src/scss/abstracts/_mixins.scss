@@ -1,0 +1,21 @@
+@use '../abstracts/var' as *;
+// @mixin flex{
+//     display: flex;
+//     align-items: center;
+//     gap:20px;
+// }
+
+@mixin border($color){
+    border: 1px solid $color;
+}
+
+@mixin bg-color(){
+    background-color: $white;
+    // @if $theme == #001f3f{
+    //     background-color: $blue;
+    //     color: $white;
+    // }@else{
+    //     background-color: $white;
+    //     color: $black;
+    // }
+}

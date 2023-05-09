@@ -1,0 +1,94 @@
+@use '../abstracts' as *;
+
+.header{
+    background-color: $blue;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1050;
+    transition: transform 1s ease;
+    .logo__con{
+        cursor: pointer;
+        img{
+            width: 28px;
+        }
+        h2{
+            color: $white;
+            font-size: 24px;
+            span{
+                color: $teal;
+            }
+        }
+    }
+    a{
+        font-weight: 500;
+        cursor: pointer;
+        font-size: 14px;
+    }
+    ul{
+        gap: 4rem;
+    }
+    li{
+        color: $white;
+        font-size: 14px;
+        transition: 0.2s all linear;
+        &:hover{
+            color: $yellow;
+        }
+    }
+    .nav__link{
+        .active{
+            color: $yellow;
+            position: relative;
+            &::after{
+                content: "";
+                position: absolute;
+                top: 100%;
+                left: -10%;
+                width: 130%;
+                height: 2px;
+                border-radius: 6px;
+                background-color: $yellow;
+                animation: underline 0.4s ease-in-out;
+            }
+        }
+    }
+    
+    .bars{
+        width: 30px;
+        height: 28px;
+        // background-color: red;
+    
+        svg{
+            color: $white;
+            font-size: 22px;
+        }
+        
+        .bar{
+            width: 100%;
+            height: 3px;
+            border-radius: 6px;
+            background-color: $white;
+            transition: .2s ease-in-out;
+        }
+        .short__bar{
+            width: 50%;
+        }
+        .full__bar{
+            width: 100%;
+        }
+    }
+}
+.offcanvas {
+    color: $white;
+    background-color: $blue !important;
+    .bar__menu{
+        .active{
+            color: $yellow;
+        }
+    }
+}
+.hideNav{
+    transform: translateY(-100%);
+}

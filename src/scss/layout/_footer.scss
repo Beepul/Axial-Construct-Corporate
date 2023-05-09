@@ -1,0 +1,93 @@
+@use "../abstracts" as *;
+
+.footer__sec{
+    background-color: $blue;
+    p{
+        color: $white;
+    }
+    .logo{
+        p{
+            font-size: 28px;
+            font-weight: 600;
+        }
+        span{
+            color: $teal;
+        }
+    }
+    h2{
+        color: $white;
+    }
+    svg{
+        color: $yellow;
+        font-size: 30px;
+        margin-right: 14px;
+    }
+    .footer__menu{
+        li{
+            color: $white;
+            // font-size: 14px;
+            font-size: 16px;
+            text-transform: uppercase;
+        }
+    }
+    .input-group {
+        display: flex;
+        align-items: center;
+    }
+    
+    .input {
+          width: 80%;
+        min-height: 50px;
+        padding: 0 1rem;
+        color: $black;
+        font-size: 15px;
+        border: 1px solid $yellow;
+      }
+      
+      button {
+        width: 20%;
+        min-height: 50px;
+        padding: .5em 1em;
+        border: none;
+        border-radius: 0;
+        background-color: $yellow;
+        cursor: pointer;
+        transition: background-color .3s ease-in-out;
+        svg{
+            color: $black;
+            font-size: 24px;
+        }
+      }
+      
+      button:hover {
+        background-color: #f8cd61;
+      }
+      
+      .input:focus, .input:focus-visible {
+        border-color: #f8cd61;
+        outline: none;
+      }
+      .footer__top{
+        border-bottom: 1px solid $white;
+        a{
+            cursor: pointer;
+            font-size: 15px;
+            transition: 0.2s all linear;
+            &:hover{
+                color: $yellow;
+            }
+        }
+      }
+      .footer__bottom{
+        
+        i{
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            background-color: $yellow;
+            color: $blue;
+            display: grid;
+            place-items: center;
+        }
+      }
+}

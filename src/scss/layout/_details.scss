@@ -1,0 +1,38 @@
+@use '../abstracts' as *;
+
+.info__con{
+    background-color: rgba(211, 211, 211, 0.26);
+    padding: 20px 30px;
+    .info{
+        p{
+            text-transform: uppercase;
+            color: $gray;
+            font-size: 15px;
+            font-weight: 600;
+        }
+        p:not(:nth-child(1)){
+            text-transform: lowercase;
+            color: $black;
+            font-size: 18px;
+        }
+    }
+    .icons{
+        i{
+            background-color: $blue;
+            color: $white;
+            height: 45px;
+            width: 45px;
+            display: grid;
+            place-items: center;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: 0.4s all;
+        }
+        li:hover{
+            i{
+                color: $white;
+                background-color: $teal;
+            }
+        }
+    }
+}

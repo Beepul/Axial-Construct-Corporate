@@ -1,0 +1,39 @@
+@use '../abstracts' as *;
+
+.single__sec{
+    background-color: $white;
+    .nav-item{
+        @include border(rgba(190, 190, 190, 0.61));
+    }
+    .nav-item:not(:last-child){
+        border-bottom: 0;
+    }
+    .nav-link{
+        color: $black;
+        font-size: 22px;
+        font-weight: 600;
+    }
+    .nav-link.active{
+        background-color: unset;
+        color: $black;
+        position: relative;
+        &::before{
+            content: "";
+            position: absolute;
+            width: 2px;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            background-color: $teal;
+        }
+    }
+    .right__sec{
+        .img__con{
+            height: 435px;
+            img{
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
